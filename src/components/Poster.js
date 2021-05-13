@@ -1,9 +1,9 @@
-export default function Poster() {
+export default function Poster(props) {
     return (
         <div className="poster-container">
-            <p>Inspirational image</p>
-            <p>Inspiration quote</p>
-            <p>Inspiration author</p>
+            <img src={props.imageLink}></img>
+            <p>{props.quoteContent}</p>
+            <p>{props.quoteAuthor}</p>
         </div>
     )
 }
