@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  font-size: 20px;
+  --button-color: #f19066;
+  --button-color-hover: #f27c49;
+  --button-color-active: #f2d0c2;
+  --gray: #535353;
+}
+
+.startpage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.startpage-container h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  color: var(--gray);
+  display: inline;
+}
+
+.startpage-container a {
+  text-decoration: none;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2); 
+  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.startpage-container a:hover {
+  background-color: var(--button-color-hover);
+  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3);
+}
+
+.startpage-container a:active {
+  background-color: var(--button-color-active);
+}
+
+.motivate-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.motivate-container a {
+  font-family: 'Caveat', cursive;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+.motivate-container h1 {
+  font-family: 'Caveat', cursive;
+  color: var(--gray);
+  font-size: 3rem;
+}
+
+.poster-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 60vh;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 32px -5px #000000; 
+  box-shadow: 0px 0px 32px -5px #000000;
+  background-size: cover;
+  padding: 1rem;
+}
+
+.poster-container p {
+  color: #ddd;
+  font-size: 2rem;
+  text-shadow: 0px 0px 5px black;
+}
+
+.poster-container .quote-content {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.poster-container .quote-author {
+  font-family: 'Homemade Apple';
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-around;
+}
+
+.button-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  text-decoration: none;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2); 
+  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: var(--button-color-hover);
+  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3);
+}
+
+.button-container button:active {
+  transition: none;
+  background-color: var(--button-color-active);
+}

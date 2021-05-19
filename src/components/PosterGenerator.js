@@ -9,8 +9,11 @@ export default function PosterGenerator() {
     const [loading, setLoading] = useState(false)
 
     const getPosterInfo = () => {
+        setQuote({})
+        setImage('')
+
         setLoading(true)
-        
+
         Promise.all([
             axios.get(
                 'https://api.quotable.io/random', {
@@ -41,6 +44,8 @@ export default function PosterGenerator() {
         .catch(err => {
             console.log(err)
         })
+
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -48,12 +53,13 @@ export default function PosterGenerator() {
     }, [])
 
     return (
-        <div className="poster-container" >
-            <h2>Generator</h2>
+        <div>
             {loading ? <p>Loading...</p> : null}
             <Poster quoteContent={quote.content} quoteAuthor={quote.author} imageLink={image}/>
-            <button>Generate New</button>
-            <button>Unique-ify</button>
+            <div className="button-container">
+                <button onClick={() => getPosterInfo()}>Generate New</button>
+                {/*<button>Unique-ify</button> TODO: later implementation */}
+            </div>
         </div>
     )
 }
