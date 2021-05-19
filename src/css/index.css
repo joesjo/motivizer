@@ -138,3 +138,23 @@
   transition: none;
   background-color: var(--button-color-active);
 }
+
+@media screen and (max-width: 1000px) {
+  .poster-container {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .motivate-container a {
+    margin-bottom: 4rem;
+  }
+
+  .button-container {
+    margin-top: 3rem;
+  }
+}
