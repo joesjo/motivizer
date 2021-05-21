@@ -84,10 +84,11 @@
   width: 100%;
   max-width: 1000px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 32px -5px #000000; 
-  box-shadow: 0px 0px 32px -5px #000000;
+  -webkit-box-shadow: 0px 0px 16px -5px #000000; 
+  box-shadow: 0px 0px 16px -5px #000000;
   background-size: cover;
   padding: 1rem;
+  background-position: center;
 }
 
 .poster-container p {
@@ -137,6 +138,11 @@
 .button-container button:active {
   transition: none;
   background-color: var(--button-color-active);
+}
+
+.button-container button:disabled {
+  background-color: var(--button-color-active);
+  cursor: default;
 }
 
 @media screen and (max-width: 1000px) {
