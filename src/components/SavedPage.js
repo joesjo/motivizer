@@ -36,13 +36,16 @@ export default function SavedPage() {
     return (
         <div className="motivate-container">
             <Link to="/"><h1>My Motivizer Posters</h1></Link>
+            {numberOfPosters === 0 ? <h2>You have no posters :{"("}</h2> :
             <Poster 
                 quoteContent={currentPoster.quote.content} 
                 quoteAuthor={currentPoster.quote.author} 
                 imageLink={currentPoster.image}
             />
+            }
             <div className="button-container">
                 <button onClick={() => changePoster("previous")}>Previous Poster</button>
+                <h2>{posterCounter + 1} / {numberOfPosters}</h2>
                 <button onClick={() => changePoster("next")}>Next Poster</button>
             </div>
         </div>
