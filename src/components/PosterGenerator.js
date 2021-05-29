@@ -60,7 +60,7 @@ export default function PosterGenerator() {
 
     return (
         <>
-            {loading ? <img src={process.env.PUBLIC_URL + '/spinner.svg'} alt="Loading..."  style={{height: "30vh", marginTop: "25vh", marginBottom: "25vh"}}/> :
+            {loading ? <img src={process.env.PUBLIC_URL + '/spinner.svg'} alt="Loading..."  style={{height: "30vh", marginTop: "20vh", marginBottom: "20vh"}}/> :
                 <Poster quoteContent={quote.content} quoteAuthor={quote.author} imageLink={image}/>
             }
             <div className="button-container">
