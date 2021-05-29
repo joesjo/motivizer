@@ -90,6 +90,7 @@
   box-shadow: 0px 0px 32px -5px #000000;
   background-size: cover;
   padding: 1rem;
+  background-position: center;
 }
 
 .poster-container p {
