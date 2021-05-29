@@ -78,6 +78,10 @@
   font-size: 3rem;
 }
 
+.motivate-container h2 {
+  color: var(--gray);
+}
+
 .poster-container {
   display: flex;
   flex-direction: column;
@@ -148,6 +152,11 @@
   transition: none;
   background-color: var(--button-color-disabled);
   cursor: default;
+}
+
+.flex-end {
+  position: absolute;
+  bottom: 4rem;
 }
 
 @media screen and (max-width: 1000px) {
