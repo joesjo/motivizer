@@ -7,6 +7,7 @@ export default function PosterGenerator() {
     const [quote, setQuote] = useState({content: '', author: ''})
     const [image, setImage] = useState('')
     const [loading, setLoading] = useState(false)
+    const [saved, setSaved] = useState(false)
 
     const getPosterInfo = () => {
         setQuote({})
@@ -25,7 +26,7 @@ export default function PosterGenerator() {
             axios.get(
                 'https://api.unsplash.com/photos/random', {
                     params: {
-                        topics: "nature,film,stree-photography,travel",
+                        topics: "nature,film,street-photography,travel",
                         orientation: "landscape",
                         client_id: process.env.REACT_APP_UNSPLASH_ACCESS_KEY
                     }
@@ -40,12 +41,19 @@ export default function PosterGenerator() {
             setImage(imageResponse.urls.regular)
 
             setLoading(false)
+            setSaved(false)
         }))
         .catch(err => {
             console.log(err)
         })
 
         setLoading(false)
+    }
+
+    const savePoster = () => {
+        const currentPosters = JSON.parse(localStorage.getItem("posters")) ?? []
+        localStorage.setItem("posters", JSON.stringify([...currentPosters, {quote: quote, image: image}]))
+        setSaved(true)
     }
 
     useEffect(() => {
@@ -58,7 +66,7 @@ export default function PosterGenerator() {
             <Poster quoteContent={quote.content} quoteAuthor={quote.author} imageLink={image}/>
             <div className="button-container">
                 <button onClick={() => getPosterInfo()}>Generate New</button>
-                {/*<button>Unique-ify</button> TODO: later implementation */}
+                <button onClick={() => savePoster()} disabled={saved}>{saved ? "✔️ Saved" : "Save Poster"}</button>
             </div>
         </>
     )

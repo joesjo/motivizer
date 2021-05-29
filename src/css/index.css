@@ -10,6 +10,7 @@
   --button-color: #f19066;
   --button-color-hover: #f27c49;
   --button-color-active: #f2d0c2;
+  --button-color-disabled: #ebb59e;
   --gray: #535353;
 }
 
@@ -113,6 +114,7 @@
   justify-content: space-around;
   align-items: center;
   height: 20vh;
+  gap: 1rem;
 }
 
 .button-container button {
@@ -131,14 +133,20 @@
   cursor: pointer;
 }
 
-.button-container button:hover {
+.button-container button:hover:enabled {
   background-color: var(--button-color-hover);
   box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3);
 }
 
-.button-container button:active {
+.button-container button:active:enabled {
   transition: none;
   background-color: var(--button-color-active);
+}
+
+.button-container button:disabled {
+  transition: none;
+  background-color: var(--button-color-disabled);
+  cursor: default;
 }
 
 @media screen and (max-width: 1000px) {
