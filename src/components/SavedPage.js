@@ -44,9 +44,9 @@ export default function SavedPage() {
             />
             }
             <div className="button-container">
-                <button onClick={() => changePoster("previous")}>Previous Poster</button>
+                <button onClick={() => changePoster("previous")}>Previous</button>
                 <h2>{posterCounter + 1} / {numberOfPosters}</h2>
-                <button onClick={() => changePoster("next")}>Next Poster</button>
+                <button onClick={() => changePoster("next")}>Next</button>
             </div>
         </div>
     )
