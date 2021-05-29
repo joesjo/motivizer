@@ -27,7 +27,7 @@ APIs used:
 
 Motivizer features a random motivational poster generator.
 A random image and a random quote is fetched from the APIs and put together to form a unique poster.
-If you like the poster you can save it locally and view it whenever you want to.
+If you like the poster you can save it locally and view it whenever you want.
 
 ### License
 
