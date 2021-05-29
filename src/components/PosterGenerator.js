@@ -52,7 +52,7 @@ export default function PosterGenerator() {
 
     const savePoster = () => {
         const currentPosters = JSON.parse(localStorage.getItem("posters")) ?? []
-        localStorage.setItem("posters", JSON.stringify([...currentPosters, {quote: quote, image: image}]))
+        localStorage.setItem("posters", JSON.stringify([...currentPosters, {id: Date.now(), quote: quote, image: image}]))
         setSaved(true)
     }
 
