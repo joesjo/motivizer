@@ -6,7 +6,7 @@ import Poster from "./Poster"
 export default function PosterGenerator() {
     const [quote, setQuote] = useState({content: '', author: ''})
     const [image, setImage] = useState('')
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [saved, setSaved] = useState(false)
 
     const getPosterInfo = () => {
@@ -60,7 +60,7 @@ export default function PosterGenerator() {
 
     return (
         <>
-            {loading ? <img src={process.env.PUBLIC_URL + '/spinner.svg'} alt="Loading..."  style={{height: "30vh", marginTop: "20vh", marginBottom: "20vh"}}/> :
+            {loading ? <img src={process.env.PUBLIC_URL + '/spinner.svg'} alt="Loading..."  style={{height: "20vh", marginTop: "20vh", marginBottom: "20vh"}}/> :
                 <Poster quoteContent={quote.content} quoteAuthor={quote.author} imageLink={image}/>
             }
             <div className="button-container">
