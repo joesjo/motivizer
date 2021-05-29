@@ -9,6 +9,9 @@ export default function PosterGenerator() {
     const [loading, setLoading] = useState(false)
 
     const getPosterInfo = () => {
+        setQuote({})
+        setImage('')
+
         setLoading(true)
 
         Promise.all([
@@ -41,6 +44,8 @@ export default function PosterGenerator() {
         .catch(err => {
             console.log(err)
         })
+
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -48,11 +53,13 @@ export default function PosterGenerator() {
     }, [])
 
     return (
-        <div>
+        <>
+            {loading ? <p>Loading...</p> : null}
             <Poster quoteContent={quote.content} quoteAuthor={quote.author} imageLink={image}/>
             <div className="button-container">
-                <button onClick={getPosterInfo} disabled={loading}>Generate New</button>
+                <button onClick={() => getPosterInfo()}>Generate New</button>
+                {/*<button>Unique-ify</button> TODO: later implementation */}
             </div>
-        </div>
+        </>
     )
 }
