@@ -47,7 +47,14 @@ export default function SavedPage() {
     return (
         <div className="motivate-container">
             <Link to="/"><h1>My Motivizer Posters</h1></Link>
-            {numberOfPosters === 0 ? <h2>You have no posters :{"("}</h2> :
+            {numberOfPosters === 0 ?
+            <>
+                <h2>You have no posters :{"("}</h2>
+                <div className="button-container">
+                    <Link to="/motivate"><button>Generate Some</button></Link>
+                </div>
+            </>
+            :
             <>
                 <Poster 
                     quoteContent={currentPoster.quote.content} 
