@@ -3,7 +3,9 @@
 Tired of being unmotivized? Generate unique motivational posters and get your life together.
 
 ## Quickstart
+Get access to an Unsplash API key and add it to an .env-file in the root directory using the .env.example-file as an example
 
+Run the following commands:
 ```
 $ git clone https://github.com/joesjo/motivizer.git
 $ cd motivizer
