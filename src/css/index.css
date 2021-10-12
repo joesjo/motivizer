@@ -12,6 +12,7 @@
   --button-color-active: #f2d0c2;
   --button-color-disabled: #ebb59e;
   --gray: #535353;
+  --lightgray: #757575;
 }
 
 .startpage-container {
@@ -19,16 +20,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-	
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .startpage-container h1 {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 3rem;
   color: var(--gray);
   display: inline;
@@ -43,14 +44,11 @@
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 1rem;
-  -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2); 
-  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
 }
 
 .startpage-container a:hover {
   background-color: var(--button-color-hover);
-  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3);
 }
 
 .startpage-container a:active {
@@ -73,9 +71,13 @@
 }
 
 .motivate-container h1 {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   color: var(--gray);
   font-size: 3rem;
+}
+
+.motivate-container h1:hover {
+  color: var(--lightgray);
 }
 
 .motivate-container h2 {
@@ -90,7 +92,7 @@
   width: 100%;
   max-width: 1000px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 32px -5px #000000; 
+  -webkit-box-shadow: 0px 0px 32px -5px #000000;
   box-shadow: 0px 0px 32px -5px #000000;
   background-size: cover;
   padding: 1rem;
@@ -104,13 +106,13 @@
 }
 
 .poster-container .quote-content {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 2rem;
   line-height: 1.5;
 }
 
 .poster-container .quote-author {
-  font-family: 'Homemade Apple';
+  font-family: "Homemade Apple";
   font-size: 1.5rem;
 }
 
@@ -132,15 +134,12 @@
   font-weight: bold;
   padding: 1rem;
   border-radius: 1rem;
-  -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2); 
-  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2);
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
 .button-container button:hover:enabled {
   background-color: var(--button-color-hover);
-  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3);
 }
 
 .button-container button:active:enabled {
@@ -171,7 +170,7 @@
   }
 
   .poster-container {
-    -webkit-box-shadow: 0px 0px 16px -5px #000000; 
+    -webkit-box-shadow: 0px 0px 16px -5px #000000;
     box-shadow: 0px 0px 16px -5px #000000;
   }
 }
